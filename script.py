@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 def scan_system():
+    os.system("sudo apt-get install lunis")
     os.system("lynis audit system --cronjob")
 
 def send_email(subject, body, to_email):
