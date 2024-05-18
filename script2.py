@@ -9,8 +9,8 @@ def scan_system():
     os.system("lynis audit system --cronjob")
 
 def send_email(subject, body, to_email):
-    from_email = "temporarymessage0@gmail.com"
-    password = "QxPnTGV23"  # Получение пароля из переменной окружения
+    from_email = "SecurityNotifications@yandex.ru"
+    password = "gwkxlvkgtlhbplqu"  # Получение пароля из переменной окружения
 
     msg = MIMEMultipart()
     msg['From'] = from_email
@@ -19,7 +19,7 @@ def send_email(subject, body, to_email):
     msg.attach(MIMEText(body, 'plain'))
 
     try:
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server = smtplib.SMTP('smtp.yandex.ru', 587)
         server.starttls()
         server.login(from_email, password)
         server.sendmail(from_email, to_email, msg.as_string())
