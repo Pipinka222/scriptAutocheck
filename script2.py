@@ -13,7 +13,7 @@ def scan_system():
 
 def send_email(subject, body, to_email):
     from_email = "SecurityNotifications@yandex.ru"
-    password = os.getenv('YANDEX_PASSWORD')  # Получение пароля из переменной окружения
+    password = "gwkxlvkgtlhbplqu"  # Получение пароля из переменной окружения
 
     msg = MIMEMultipart()
     msg['From'] = from_email
